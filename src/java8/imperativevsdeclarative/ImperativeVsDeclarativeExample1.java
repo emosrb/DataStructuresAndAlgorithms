@@ -15,8 +15,14 @@ public class ImperativeVsDeclarativeExample1 {
         for(int i=0;i<=100;i++){
                 sum+=i; // shared mutable state and its sequential anf it will go step by step
                     // and it will have issues if we try to run the code in multithreaded environment
+
         }
         System.out.println("Sum is : "+sum);
+        //Drawbacks: In multithreaded env if there are lots of threads then it will be problem here as we
+        // have a mutable variable sum.
+        //In multithreaded env we have to create threads which is not the case in JAVA 8 there we can
+        // just use the parallel method like below
+
 
 
         /**

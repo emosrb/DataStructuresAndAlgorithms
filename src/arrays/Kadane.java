@@ -36,7 +36,7 @@ class Kadane {
     // Driver code
     public static void main(String[] args)
     {
-         int a[] = { -2, -3, 4, -1, -2, 1, 5, -3 };
+         int a[] = { -2, 3, -1, 1, -2, 1, 5, -3 };
         //int a[] = { -2, -3, 4, -1};
         //int a[] = { 5, 2, 3,10};
 
