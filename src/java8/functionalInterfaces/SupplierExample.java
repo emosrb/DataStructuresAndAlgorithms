@@ -8,7 +8,8 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class SupplierExample {
-
+    //Simililar to Consumer but it doesnt take input but returns wch
+    //is opposiye in Consumer
     public static  Supplier<Student> studentSupplier = () -> {
       return  new Student("Adam",2,4.0,"male", Arrays.asList("swimming", "basketball","volleyball"));
     };

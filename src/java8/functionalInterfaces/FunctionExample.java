@@ -20,7 +20,8 @@ public class FunctionExample {
         System.out.println("Result of andthen : " + upperCase.andThen(addSomeString).apply("java8"));
 
         System.out.println("Result of compose : " + upperCase.compose(addSomeString).apply("java8"));
-
+        //Diff between andThen and compose is in andThen it performs uppercase first and then add some string and in
+        //other it s opposite
         Function<String,String> abc = Function.identity();
 
         System.out.println(abc.apply("ABC"));

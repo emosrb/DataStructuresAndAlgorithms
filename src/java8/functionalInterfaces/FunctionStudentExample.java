@@ -10,7 +10,8 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class FunctionStudentExample {
-
+    //static Function<List<Student>, Map<String, Double>>
+    //In above <List<Student> is input and Map is the output
     static Function<List<Student>, Map<String, Double>>  function = (students -> {
 
         Map<String,Double> studentGradeMap = new HashMap<>();
