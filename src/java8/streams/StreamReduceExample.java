@@ -18,7 +18,9 @@ public class StreamReduceExample {
 
         return integerList.stream()
                 .reduce(1, (a,b) -> a*b);
-
+    //reduce basically takes stream and reduce it to a single value
+        //reduce has binary operator which takes two input of same type and returns
+        // a single value of same type
     }
 
     public static Optional<Integer> performMultiplicationWithNoInitialValue(List<Integer> integerList){

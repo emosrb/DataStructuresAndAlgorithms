@@ -16,7 +16,7 @@ public class ParallelStreamExample {
 
         long start = System.currentTimeMillis();
         for(int i=0;i<numberOfTimes;i++){
-            sum.get();
+            sum.get(); // THis invokes  sum_parallel_stream and sum_sequential_stream
         }
 
         long end = System.currentTimeMillis();
