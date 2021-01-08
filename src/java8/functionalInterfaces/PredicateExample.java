@@ -18,7 +18,7 @@ public class PredicateExample {
 
     public static void predicateOr(){
 
-        System.out.println("Result in predicateOr : " + p1.and(p2).test(4));
+        System.out.println("Result in predicateOr : " + p1.or(p2).test(4));
     }
 
     public static void predicateNegate(){

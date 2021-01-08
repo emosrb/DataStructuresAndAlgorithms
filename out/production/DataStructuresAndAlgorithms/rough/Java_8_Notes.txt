@@ -1,0 +1,1 @@
+If in an interface there is only one abstract interface that is called as functional interface.

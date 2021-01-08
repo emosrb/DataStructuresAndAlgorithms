@@ -43,7 +43,7 @@ public class ConsumerExample {
 
         Consumer<String> c1 = (s) -> System.out.println(s.toUpperCase());
 
-        c1.accept("java8");
+        c1.accept("java8"); // accept passes the input
 
         printName();
         printNameAndActivities();

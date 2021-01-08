@@ -14,7 +14,7 @@ public class StreamFlatMapExample {
         List<String> studentActivities = StudentDataBase.getAllStudents()
                 .stream()
                 .map(Student::getActivities) //Stream<List<String>>
-                .flatMap(List::stream) //<Stream<String>
+                .flatMap(List::stream) //<Stream<String> // flatmap is used when each element is stream
                 .collect(toList());
 
         return studentActivities;
