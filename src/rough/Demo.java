@@ -1,31 +1,42 @@
 package rough;
 
-import java.util.*;
-import java.util.function.BiFunction;
-import java.util.function.BinaryOperator;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
-class Java8BinaryOperator2 {
+
+class Java8Function3 {
 
     public static void main(String[] args) {
 
-        Integer[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Java8Function3 obj = new Java8Function3();
 
-        Integer result = math(Arrays.asList(numbers), 0, (a, b) -> a + b);
+        List<String> list = Arrays.asList("node", "c++", "java", "javascript");
 
-        System.out.println(result); // 55
+        // lambda
+        Map<String, Integer> map = obj.convertListToMap(list, x -> x.length());
 
-        Integer result2 = math(Arrays.asList(numbers), 0, Integer::sum);
+        System.out.println(map);    // {node=4, c++=3, java=4, javascript=10}
 
-        System.out.println(result2); // 55
+        // method reference
+        Map<String, Integer> map2 = obj.convertListToMap(list, obj::getLength);
+
+        System.out.println(map2);
+    }
+
+    public <T, R> Map<T, R> convertListToMap(List<T> list, Function<T, R> func) {
+
+        Map<T, R> result = new HashMap<>();
+        for (T t : list) {
+            result.put(t, func.apply(t));
+        }
+        return result;
 
     }
 
-    public static <T> T math(List<T> list, T init, BinaryOperator<T> accumulator) {
-        T result = init;
-        for (T t : list) {
-            result = accumulator.apply(result, t);
-        }
-        return result;
+    public Integer getLength(String str) {
+        return str.length();
     }
 
 }
