@@ -1,1 +1,8 @@
-If in an interface there is only one abstract interface that is called as functional interface.
+(predicate::test) without test as well output coming
+
+
+ .map(x -> x.getBook())         //  Stream<Set<String>>
+.flatMap(x -> x.stream())
+
+Here getBook is another stream so we need to flat , flatmap it
+
